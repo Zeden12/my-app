@@ -28,6 +28,15 @@
         <li><a href="#">Contact</a></li>
       </ul>
       <i id="white-mode" class="fa-solid fa-sun"></i>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="dropdown_menu">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./About.html">About</a></li>
+      <li><a href="#">Contact</a></li>
     </div>
 
   </header>
@@ -42,15 +51,17 @@
                 to Deal With Me! <br>
                 Or Contact Me Via Phone Or Socials
             </p>
-            <h4><i class="fa-brands fa-phone"></i> (+250) 78 196 32 32 <br>
-                <i class="fa-brands fa-wind"></i> kwizeraernez@gmail.com
+            <h4><a href="tel:+250781963232"><i class="fa-solid fa-phone"></i></a>
+              (+250) 78 196 32 32 <br>
+              <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                 kwizeraernez@gmail.com
             </h4>
             <div class="contact-social-links">
-                <a href="https://github.com/Zeden12" ><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://github.com/Zeden12" ><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/ernest-haguma-kwizera-709195241/"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://web.facebook.com/kwizera.cjernez"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://twitter.com/ZedishCharm"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.instagram.com/squach_cj_zeden/"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
         <div class="contact-form">
@@ -68,11 +79,11 @@
   <footer>
     <div class="social-links">
         <p>Talk To Me</p>
-        <a href="https://github.com/Zeden12" ><i class="fa-brands fa-github"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://github.com/Zeden12" ><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/ernest-haguma-kwizera-709195241/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://web.facebook.com/kwizera.cjernez"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://twitter.com/ZedishCharm"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.instagram.com/squach_cj_zeden/"><i class="fa-brands fa-instagram"></i></a>
         <p>
           Tel: (+250)781963232 
         </p>
@@ -90,5 +101,20 @@
     </div>
     
   </footer>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick = function () {
+      dropDownMenu.classList.toggle('open')
+      const isOpen = dropDownMenu.classList.contains('open')
+
+      toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    } 
+  </script>
 </body>
 </html>
